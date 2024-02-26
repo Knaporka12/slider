@@ -1,0 +1,117 @@
+$font-color: darken(papayawhip, 40%);
+
+@mixin flex-center($direction: row, $wrap: wrap) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+// koniec zmiennych i mixinów
+
+.active {
+    background-color: $font-color !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include flex-center(column, nowrap);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    color: $font-color;
+}
+
+#root,
+.App {
+    @include flex-center(column, nowrap);
+    width: 100%;
+    flex-grow: 1;
+}
+
+.header {
+    width: 100%;
+
+    &__h1 {
+        font-size: 4.75rem;
+        text-align: center;
+        margin-top: 0.75rem;
+    }
+}
+
+.main {
+    width: 100%;
+    flex-grow: 1;
+    @include flex-center(column, nowrap);
+    gap: 1rem;
+    margin-top: -100px;
+
+    &__figure {
+        position: relative;
+
+        div {
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            @include flex-center;
+            cursor: pointer;
+        }
+    }
+
+    &__img {
+        width: 800px;
+        height: 500px;
+        border: 3px solid $font-color;
+        border-radius: 10px;
+        box-shadow: 0px 0px 25px -10px black;
+    }
+
+    &__previous-photo {
+        left: 15px;
+    }
+
+    &__next-photo {
+        right: 15px;
+    }
+
+    &__previous-photo:hover &__arrow {
+        color: darken($font-color, 10%);
+    }
+
+    &__next-photo:hover &__arrow {
+        color: darken($font-color, 10%);
+    }
+
+    &__arrow {
+        transition: 0.2s all;
+        color: $font-color;
+
+    }
+
+    &__container--dots {
+        @include flex-center();
+        gap: 3rem;
+    }
+
+    &__dot {
+        width: 18px;
+        height: 18px;
+        background-color: gray;
+        border-radius: 50%;
+        transition: 0.3s all;
+        cursor: pointer;
+    }
+
+    &__dot:hover {
+        background-color: $font-color;
+    }
+
+}

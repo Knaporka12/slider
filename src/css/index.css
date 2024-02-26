@@ -1,0 +1,107 @@
+.active {
+  background-color: #ffa109 !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  color: #ffa109;
+}
+
+#root,
+.App {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.header {
+  width: 100%;
+}
+.header__h1 {
+  font-size: 4.75rem;
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+.main {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: -100px;
+}
+.main__figure {
+  position: relative;
+}
+.main__figure div {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.main__img {
+  width: 800px;
+  height: 500px;
+  border: 3px solid #ffa109;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px -10px black;
+}
+.main__previous-photo {
+  left: 15px;
+}
+.main__next-photo {
+  right: 15px;
+}
+.main__previous-photo:hover .main__arrow {
+  color: #d58400;
+}
+.main__next-photo:hover .main__arrow {
+  color: #d58400;
+}
+.main__arrow {
+  transition: 0.2s all;
+  color: #ffa109;
+}
+.main__container--dots {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.main__dot {
+  width: 18px;
+  height: 18px;
+  background-color: gray;
+  border-radius: 50%;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+.main__dot:hover {
+  background-color: #ffa109;
+}/*# sourceMappingURL=index.css.map */

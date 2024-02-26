@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": "1",  
+      "src": "img/bez-glutenu-i-laktozy.jpg"
+      
+    },
+    {
+      "id": "2",  
+      "src": "img/ketogeniczna.jpg"
+      
+    },
+    {
+      "id": "3",  
+      "src": "img/carnivore.jpg"
+      
+    },
+    {
+      "id": "4",  
+      "src": "img/sport.jpg"
+      
+    },
+    {
+      "id": "5",  
+      "src": "img/niskie-ig.jpg"
+      
+    },
+    {
+      "id": "6",  
+      "src": "img/classic.jpg"
+      
+    }
+  ]
+}
